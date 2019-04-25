@@ -1,0 +1,7 @@
+C:\Users\lipeu\Downloads\Trab Pesq\Programa\Mineracao_de_Texto_B\Mineracao_de_Texto_B\bin\Debug\Mineracao_de_Texto_B.exe.config
+C:\Users\lipeu\Downloads\Trab Pesq\Programa\Mineracao_de_Texto_B\Mineracao_de_Texto_B\bin\Debug\Mineracao_de_Texto_B.exe
+C:\Users\lipeu\Downloads\Trab Pesq\Programa\Mineracao_de_Texto_B\Mineracao_de_Texto_B\bin\Debug\Mineracao_de_Texto_B.pdb
+C:\Users\lipeu\Downloads\Trab Pesq\Programa\Mineracao_de_Texto_B\Mineracao_de_Texto_B\obj\Debug\Mineracao_de_Texto_B.csprojAssemblyReference.cache
+C:\Users\lipeu\Downloads\Trab Pesq\Programa\Mineracao_de_Texto_B\Mineracao_de_Texto_B\obj\Debug\Mineracao_de_Texto_B.csproj.CoreCompileInputs.cache
+C:\Users\lipeu\Downloads\Trab Pesq\Programa\Mineracao_de_Texto_B\Mineracao_de_Texto_B\obj\Debug\Mineracao_de_Texto_B.exe
+C:\Users\lipeu\Downloads\Trab Pesq\Programa\Mineracao_de_Texto_B\Mineracao_de_Texto_B\obj\Debug\Mineracao_de_Texto_B.pdb

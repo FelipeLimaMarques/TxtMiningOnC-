@@ -1,0 +1,496 @@
+The importance of Cloud Computing is increasing and it is receiving a growing attention in the scientific and industrial communities. A study by Gartner considered Cloud Computing as the first among the top 10 most important technologies and with a better prospect in successive years by companies and organizations.
+
+Cloud Computing enables ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.
+
+Cloud Computing appears as a computational paradigm as well as a distribution architecture and its main objective is to provide secure, quick, convenient data storage and net computing service, with all computing resources visualized as services and delivered over the Internet. The cloud enhances collaboration, agility, scalability, availability, ability to adapt to fluctuations according to demand, accelerate development work, and provides potential for cost reduction through optimized and efficient computing.
+
+Cloud Computing combines a number of computing concepts and technologies such as Service Oriented Architecture (SOA), Web 2.0, virtualization and other technologies with reliance on the Internet, providing common business applications online through web browsers to satisfy the computing needs of users, while their software and data are stored on the servers. In some respects, Cloud Computing represents the maturing of these technologies and is a marketing term to represent that maturity and the services they provide.
+
+Although there are many benefits to adopting Cloud Computing, there are also some significant barriers to adoption. One of the most significant barriers to adoption is security, followed by issues regarding compliance, privacy and legal matters [8]. Because Cloud Computing represents a relatively new computing model, there is a great deal of uncertainty about how security at all levels (e.g., network, host, application, and data levels) can be achieved and how applications security is moved to Cloud Computing. That uncertainty has consistently led information executives to state that security is their number one concern with Cloud Computing.
+
+Security concerns relate to risk areas such as external data storage, dependency on the “public” internet, lack of control, multi-tenancy and integration with internal security. Compared to traditional technologies, the cloud has many specific features, such as its large scale and the fact that resources belonging to cloud providers are completely distributed, heterogeneous and totally virtualized. Traditional security mechanisms such as identity, authentication, and authorization are no longer enough for clouds in their current form. Security controls in Cloud Computing are, for the most part, no different than security controls in any IT environment. However, because of the cloud service models employed, the operational models, and the technologies used to enable cloud services, Cloud Computing may present different risks to an organization than traditional IT solutions. Unfortunately, integrating security into these solutions is often perceived as making them more rigid.
+
+Moving critical applications and sensitive data to public cloud environments is of great concern for those corporations that are moving beyond their data center’s network under their control. To alleviate these concerns, a cloud solution provider must ensure that customers will continue to have the same security and privacy controls over their applications and services, provide evidence to customers that their organization are secure and they can meet their service-level agreements, and that they can prove compliance to auditors.
+
+We present here a categorization of security issues for Cloud Computing focused in the so-called SPI model (SaaS, PaaS and IaaS), identifying the main vulnerabilities in this kind of systems and the most important threats found in the literature related to Cloud Computing and its environment. A threat is a potential attack that may lead to a misuse of information or resources, and the term vulnerability refers to the flaws in a system that allows an attack to be successful. There are some surveys where they focus on one service model, or they focus on listing cloud security issues in general without distinguishing among vulnerabilities and threats. Here, we present a list of vulnerabilities and threats, and we also indicate what cloud service models can be affected by them. Furthermore, we describe the relationship between these vulnerabilities and threats; how these vulnerabilities can be exploited in order to perform an attack, and also present some countermeasures related to these threats which try to solve or improve the identified problems.
+
+The remainder of the paper is organized as follows: Section 2 presents the results obtained from our systematic review. Next, in Section 3 we define in depth the most important security aspects for each layer of the Cloud model. Later, we will analyze the security issues in Cloud Computing identifying the main vulnerabilities for clouds, the most important threats in clouds, and all available countermeasures for these threats and vulnerabilities. Finally, we provide some conclusions.
+
+Systematic review of security issues for cloud computing
+We have carried out a systematic reviewof the existing literature regarding security in Cloud Computing, not only in order to summarize the existing vulnerabilities and threats concerning this topic but also to identify and analyze the current state and the most important security issues for Cloud Computing.
+
+Question formalization
+The question focus was to identify the most relevant issues in Cloud Computing which consider vulnerabilities, threats, risks, requirements and solutions of security for Cloud Computing. This question had to be related with the aim of this work; that is to identify and relate vulnerabilities and threats with possible solutions. Therefore, the research question addressed by our research was the following: What security vulnerabilities and threats are the most important in Cloud Computing which have to be studied in depth with the purpose of handling them? The keywords and related concepts that make up this question and that were used during the review execution are: secure Cloud systems, Cloud security, delivery models security, SPI security, SaaS security, Paas security, IaaS security, Cloud threats, Cloud vulnerabilities, Cloud recommendations, best practices in Cloud.
+
+Selection of sources
+The selection criteria through which we evaluated study sources was based on the research experience of the authors of this work, and in order to select these sources we have considered certain constraints: studies included in the selected sources must be written in English and these sources must be web-available. The following list of sources has been considered: ScienceDirect, ACM digital library, IEEE digital library, Scholar Google and DBLP. Later, the experts will refine the results and will include important works that had not been recovered in these sources and will update these work taking into account other constraints such as impact factor, received cites, important journals, renowned authors, etc.
+
+Once the sources had been defined, it was necessary to describe the process and the criteria for study selection and evaluation. The inclusion and exclusion criteria of this study were based on the research question. We therefore established that the studies must contain issues and topics which consider security on Cloud Computing, and that these studies must describe threats, vulnerabilities, countermeasures, and risks.
+
+Review execution
+During this phase, the search in the defined sources must be executed and the obtained studies must be evaluated according to the established criteria. After executing the search chain on the selected sources we obtained a set of about 120 results which were filtered with the inclusion criteria to give a set of about 40 relevant studies. This set of relevant studies was again filtered with the exclusion criteria to give a set of studies which corresponds with 15 primary proposals.
+
+Results and discussion
+The results of the systematic review are summarized in Table 1 which shows a summary of the topics and concepts considered for each approach.
+
+Summary of the topics considered in each approach
+
+Topics/References
+
+Vulnerabilities
+
+Threats
+
+Mechanisms/Recommendations
+
+Security Standards
+	 	 	 	 
+Data Security
+
+Trust
+
+Security Requirements
+
+SaaS, PaaS, IaaS Security
+ 	 	 
+As it is shown in Table 1, most of the approaches discussed identify, classify, analyze, and list a number of vulnerabilities and threats focused on Cloud Computing. The studies analyze the risks and threats, often give recommendations on how they can be avoided or covered, resulting in a direct relationship between vulnerability or threats and possible solutions and mechanisms to solve them. In addition, we can see that in our search, many of the approaches, in addition to speaking about threats and vulnerabilities, also discuss other issues related to security in the Cloud such as the data security, trust, or security recommendations and mechanisms for any of the problems encountered in these environments.
+
+Security in the SPI model
+The cloud model provides three types of services:
+
+Software as a Service (SaaS). The capability provided to the consumer is to use the provider’s applications running on a cloud infrastructure. The applications are accessible from various client devices through a thin client interface such as a web browser (e.g., web-based email).
+
+Platform as a Service (PaaS). The capability provided to the consumer is to deploy onto the cloud infrastructure his own applications without installing any platform or tools on their local machines. PaaS refers to providing platform layer resources, including operating system support and software development frameworks that can be used to build higher-level services.
+
+Infrastructure as a Service (IaaS). The capability provided to the consumer is to provision processing, storage, networks, and other fundamental computing resources where the consumer is able to deploy and run arbitrary software, which can include operating systems and applications.
+
+With SaaS, the burden of security lies with the cloud provider. In part, this is because of the degree of abstraction, the SaaS model is based on a high degree of integrated functionality with minimal customer control or extensibility. By contrast, the PaaS model offers greater extensibility and greater customer control. Largely because of the relatively lower degree of abstraction, IaaS offers greater tenant or customer control over security than do PaaS or SaaS.
+
+Before analyzing security challenges in Cloud Computing, we need to understand the relationships and dependencies between these cloud service models. PaaS as well as SaaS are hosted on top of IaaS; thus, any breach in IaaS will impact the security of both PaaS and SaaS services, but also it may be true on the other way around. However, we have to take into account that PaaS offers a platform to build and deploy SaaS applications, which increases the security dependency between them. As a consequence of these deep dependencies, any attack to any cloud service layer can compromise the upper layers. Each cloud service model comprises its own inherent security flaws; however, they also share some challenges that affect all of them. These relationships and dependencies between cloud models may also be a source of security risks. A SaaS provider may rent a development environment from a PaaS provider, which might also rent an infrastructure from an IaaS provider. Each provider is responsible for securing his own services, which may result in an inconsistent combination of security models. It also creates confusion over which service provider is responsible once an attack happens.
+
+Software-as-a-service (SaaS) security issues
+SaaS provides application services on demand such as email, conferencing software, and business applications such as ERP, CRM, and SCM. SaaS users have less control over security among the three fundamental delivery models in the cloud. The adoption of SaaS applications may raise some security concerns.
+
+Application security
+These applications are typically delivered via the Internet through a Web browser. However, flaws in web applications may create vulnerabilities for the SaaS applications. Attackers have been using the web to compromise user’s computers and perform malicious activities such as steal sensitive data. Security challenges in SaaS applications are not different from any web application technology, but traditional security solutions do not effectively protect it from attacks, so new approaches are necessary. The Open Web Application Security Project (OWASP) has identified the ten most critical web applications security threats. There are more security issues, but it is a good start for securing web applications.
+
+Multi-tenancy
+SaaS applications can be grouped into maturity models that are determined by the following characteristics: scalability, configurability via metadata, and multi-tenancy. In the first maturity model, each customer has his own customized instance of the software. This model has drawbacks, but security issues are not so bad compared with the other models. In the second model, the vendor also provides different instances of the applications for each customer, but all instances use the same application code. In this model, customers can change some configuration options to meet their needs. In the third maturity model multi-tenancy is added, so a single instance serves all customers [34]. This approach enables more efficient use of the resources but scalability is limited. Since data from multiple tenants is likely to be stored in the same database, the risk of data leakage between these tenants is high. Security policies are needed to ensure that customer’s data are kept separate from other customers [35]. For the final model, applications can be scaled up by moving the application to a more powerful server if needed.
+
+Data security
+Data security is a common concern for any technology, but it becomes a major challenge when SaaS users have to rely on their providers for proper security. In SaaS, organizational data is often processed in plaintext and stored in the cloud. The SaaS provider is the one responsible for the security of the data while is being processed and stored [30]. Also, data backup is a critical aspect in order to facilitate recovery in case of disaster, but it introduces security concerns as well. Also cloud providers can subcontract other services such as backup from third-party service providers, which may raise concerns. Moreover, most compliance standards do not envision compliance with regulations in a world of Cloud Computing. In the world of SaaS, the process of compliance is complex because data is located in the provider’s datacenters, which may introduce regulatory compliance issues such as data privacy, segregation, and security, that must be enforced by the provider.
+
+Accessibility
+Accessing applications over the internet via web browser makes access from any network device easier, including public computers and mobile devices. However, it also exposes the service to additional security risks. The Cloud Security Alliance [37] has released a document that describes the current state of mobile computing and the top threats in this area such as information stealing mobile malware, insecure networks (WiFi), vulnerabilities found in the device OS and official applications, insecure marketplaces, and proximity-based hacking.
+
+Platform-as-a-service (PaaS) security issues
+PaaS facilitates deployment of cloud-based applications without the cost of buying and maintaining the underlying hardware and software layers. As with SaaS and IaaS, PaaS depends on a secure and reliable network and secure web browser. PaaS application security comprises two software layers: Security of the PaaS platform itself (i.e., runtime engine), and Security of customer applications deployed on a PaaS platform. PaaS providers are responsible for securing the platform software stack that includes the runtime engine that runs the customer applications. Same as SaaS, PaaS also brings data security issues and other challenges that are described as follows:
+
+Third-party relationships
+Moreover, PaaS does not only provide traditional programming languages, but also does it offer third-party web services components such as mashups. Mashups combine more than one source element into a single integrated unit. Thus, PaaS models also inherit security issues related to mashups such as data and network security [39]. Also, PaaS users have to depend on both the security of web-hosted development tools and third-party services.
+
+Development Life Cycle
+From the perspective of the application development, developers face the complexity of building secure applications that may be hosted in the cloud. The speed at which applications will change in the cloud will affect both the System Development Life Cycle (SDLC) and security. Developers have to keep in mind that PaaS applications should be upgraded frequently, so they have to ensure that their application development processes are flexible enough to keep up with changes. However, developers also have to understand that any changes in PaaS components can compromise the security of their applications. Besides secure development techniques, developers need to be educated about data legal issues as well, so that data is not stored in inappropriate locations. Data may be stored on different places with different legal regimes that can compromise its privacy and security.
+
+Underlying infrastructure security
+In PaaS, developers do not usually have access to the underlying layers, so providers are responsible for securing the underlying infrastructure as well as the applications services. Even when developers are in control of the security of their applications, they do not have the assurance that the development environment tools provided by a PaaS provider are secure.
+
+In conclusion, there is less material in the literature about security issues in PaaS. SaaS provides software delivered over the web while PaaS offers development tools to create SaaS applications. However, both of them may use multi-tenant architecture so multiple concurrent users utilize the same software. Also, PaaS applications and user’s data are also stored in cloud servers which can be a security concern as discussed on the previous section. In both SaaS and PaaS, data is associated with an application running in the cloud. The security of this data while it is being processed, transferred, and stored depends on the provider.
+
+Infrastructure-as-a-service (IaaS) security issues
+IaaS provides a pool of resources such as servers, storage, networks, and other computing resources in the form of virtualized systems, which are accessed through the Internet. Users are entitled to run any software with full control and management on the resources allocated to them. With IaaS, cloud users have better control over the security compared to the other models as long there is no security hole in the virtual machine monitor. They control the software running in their virtual machines, and they are responsible to configure security policies correctly. However, the underlying compute, network, and storage infrastructure is controlled by cloud providers. IaaS providers must undertake a substantial effort to secure their systems in order to minimize these threats that result from creation, communication, monitoring, modification, and mobility. Here are some of the security issues associated to IaaS.
+
+Virtualization
+Virtualization allows users to create, copy, share, migrate, and roll back virtual machines, which may allow them to run a variety of applications. However, it also introduces new opportunities for attackers because of the extra layer that must be secured. Virtual machine security becomes as important as physical machine security, and any flaw in either one may affect the other. Virtualized environments are vulnerable to all types of attacks for normal infrastructures; however, security is a greater challenge as virtualization adds more points of entry and more interconnection complexity [45]. Unlike physical servers, VMs have two boundaries: physical and virtual.
+
+Virtual machine monitor
+The Virtual Machine Monitor (VMM) or hypervisor is responsible for virtual machines isolation; therefore, if the VMM is compromised, its virtual machines may potentially be compromised as well. The VMM is a low-level software that controls and monitors its virtual machines, so as any traditional software it entails security flaws [45]. Keeping the VMM as simple and small as possible reduces the risk of security vulnerabilities, since it will be easier to find and fix any vulnerability.
+
+Moreover, virtualization introduces the ability to migrate virtual machines between physical servers for fault tolerance, load balancing or maintenance. This useful feature can also raise security problems. An attacker can compromise the migration module in the VMM and transfer a victim virtual machine to a malicious server. Also, it is clear that VM migration exposes the content of the VM to the network, which can compromise its data integrity and confidentiality. A malicious virtual machine can be migrated to another host (with another VMM) compromising it.
+
+Shared resource
+VMs located on the same server can share CPU, memory, I/O, and others. Sharing resources between VMs may decrease the security of each VM. For example, a malicious VM can infer some information about other VMs through shared memory or other shared resources without need of compromising the hypervisor [46]. Using covert channels, two VMs can communicate bypassing all the rules defined by the security module of the VMM. Thus, a malicious Virtual Machine can monitor shared resources without being noticed by its VMM, so the attacker can infer some information about other virtual machines.
+
+Public VM image repository
+In IaaS environments, a VM image is a prepackaged software template containing the configurations files that are used to create VMs. Thus, these images are fundamental for the the overall security of the cloud [46, 49]. One can either create her own VM image from scratch, or one can use any image stored in the provider’s repository. For example, Amazon offers a public image repository where legitimate users can download or upload a VM image. Malicious users can store images containing malicious code into public repositories compromising other users or even the cloud system. For example, an attacker with a valid account can create an image containing malicious code such as a Trojan horse. If another customer uses this image, the virtual machine that this customer creates will be infected with the hidden malware. Moreover, unintentionally data leakage can be introduced by VM replication. Some confidential information such as passwords or cryptographic keys can be recorded while an image is being created. If the image is not “cleaned”, this sensitive information can be exposed to other users. VM images are dormant artifacts that are hard to patch while they are offline [50].
+
+Virtual machine rollback
+Furthermore, virtual machines are able to be rolled back to their previous states if an error happens. But rolling back virtual machines can re-expose them to security vulnerabilities that were patched or re-enable previously disabled accounts or passwords. In order to provide rollbacks, we need to make a “copy” (snapshot) of the virtual machine, which can result in the propagation of configuration errors and other vulnerabilities.
+
+Virtual machine life cycle
+Additionally, it is important to understand the lifecycle of the VMs and their changes in states as they move through the environment. VMs can be on, off, or suspended which makes it harder to detect malware. Also, even when virtual machines are offline, they can be vulnerable; that is, a virtual machine can be instantiated using an image that may contain malicious code. These malicious images can be the starting point of the proliferation of malware by injecting malicious code within other virtual machines in the creation process.
+
+Virtual networks
+Network components are shared by different tenants due to resource pooling. As mentioned before, sharing resources allows attackers to launch cross-tenant attacks. Virtual Networks increase the VMs interconnectivity, an important security challenge in Cloud Computing. The most secure way is to hook each VM with its host by using dedicated physical channels. However, most hypervisors use virtual networks to link VMs to communicate more directly and efficiently. For instance, most virtualization platforms such as Xen provide two ways to configure virtual networks: bridged and routed, but these techniques increase the possibility to perform some attacks such as sniffing and spoofing virtual network.
+
+Analysis of security issues in cloud computing
+We systematically analyze now existing security vulnerabilities and threats of Cloud Computing. For each vulnerability and threat, we identify what cloud service model or models are affected by these security problems.
+
+Presents an analysis of vulnerabilities in Cloud Computing. This analysis offers a brief description of the vulnerabilities, and indicates what cloud service models (SPI) can be affected by them. For this analysis, we focus mainly on technology-based vulnerabilities; however, there are other vulnerabilities that are common to any organization, but they have to be taken in consideration since they can negatively impact the security of the cloud and its underlying platform. Some of these vulnerabilities are the following:
+
+Lack of employee screening and poor hiring practices – some cloud providers may not perform background screening of their employees or providers. Privileged users such as cloud administrators usually have unlimited access to the cloud data.
+
+Lack of customer background checks – most cloud providers do not check their customer’s background, and almost anyone can open an account with a valid credit card and email. Apocryphal accounts can let attackers perform any malicious activity without being identified.
+
+Lack of security education – people continue to be a weak point in information security [53]. This is true in any type of organization; however, in the cloud, it has a bigger impact because there are more people that interact with the cloud: cloud providers, third-party providers, suppliers, organizational customers, and end-users.
+
+Cloud Computing leverages many existing technologies such as web services, web browsers, and virtualization, which contributes to the evolution of cloud environments. Therefore, any vulnerability associated to these technologies also affects the cloud, and it can even have a significant impact.
+
+Vulnerabilities in cloud computing
+
+ID
+
+Vulnerabilities
+
+Description
+
+Layer
+
+V01
+
+Insecure interfaces and APIs
+
+Cloud providers offer services that can be accessed through APIs (SOAP, REST, or HTTP with XML/JSON). The security of the cloud depends upon the security of these interfaces. Some problems are:
+
+SPI
+
+Weak credential
+
+ Insufficient authorization checks
+
+ Insufficient input-data validation
+
+Also, cloud APIs are still immature which means that are frequently updated. A fixed bug can introduce another security hole in the application.
+
+V02
+
+Unlimited allocation of resources
+
+Inaccurate modeling of resource usage can lead to overbooking or over-provisioning.
+
+SPI
+
+V03
+
+Data-related vulnerabilities
+
+Data can be colocated with the data of unknown owners (competitors, or intruders) with a weak separation
+
+SPI
+
+Data may be located in different jurisdictions which have different laws
+
+Incomplete data deletion – data cannot be completely removed 
+
+Data backup done by untrusted third-party providers
+
+Information about the location of the data usually is unavailable or not disclosed to users 
+
+Data is often stored, processed, and transferred in clear plain text
+
+V04
+
+Vulnerabilities in Virtual Machines
+
+Possible covert channels in the colocation of VMs 
+
+I
+
+b) Unrestricted allocation and deallocation of resources with VMs 
+
+c) Uncontrolled Migration - VMs can be migrated from one server to another server due to fault tolerance, load balance, or hardware maintenance 
+
+d) Uncontrolled snapshots – VMs can be copied in order to provide flexibility, which may lead to data leakage
+
+e) Uncontrolled rollback could lead to reset vulnerabilities - VMs can be backed up to a previous state for restoration, but patches applied after the previous state disappear
+
+f) VMs have IP addresses that are visible to anyone within the cloud - attackers can map where the target VM is located within the cloud (Cloud cartography)
+
+V05
+
+Vulnerabilities in Virtual Machine Images
+
+a) Uncontrolled placement of VM images in public repositories
+
+I
+
+b) VM images are not able to be patched since they are dormant artifacts
+
+V06
+
+Vulnerabilities in Hypervisors
+
+a) Complex hypervisor code
+
+I
+
+b) Flexible configuration of VMs or hypervisors to meet organization needs can be exploited
+
+Vulnerabilities in Virtual Networks
+
+Sharing of virtual bridges by several virtual machines 
+
+I
+
+From Table 2, we can conclude that data storage and virtualization are the most critical and an attack to them can do the most harm. Attacks to lower layers have more impact to the other layers. Table 3 presents an overview of threats in Cloud Computing. Like Table 2 it also describes the threats that are related to the technology used in cloud environments, and it indicates what cloud service models are exposed to these threats. We put more emphasis on threats that are associated with data being stored and processed remotely, sharing resources and the usage of virtualization.
+
+Threats in cloud computing
+
+ID
+
+Threats
+
+Description
+
+Layer
+
+Account or service hijacking
+
+An account theft can be performed by different ways such as social engineering and weak credentials. If an attacker gains access to a user’s credential, he can perform malicious activities such as access sensitive data, manipulate data, and redirect any transaction.
+
+SPI
+
+T02
+
+Data scavenging
+
+Since data cannot be completely removed from unless the device is destroyed, attackers may be able to recover this data.
+
+SPI
+
+T03
+
+Data leakage
+
+Data leakage happens when the data gets into the wrong hands while it is being transferred, stored, audited or processed.
+
+SPI
+
+T04
+
+Denial of Service
+
+It is possible that a malicious user will take all the possible resources. Thus, the system cannot satisfy any request from other legitimate users due to resources being unavailable.
+
+SPI
+
+T05
+
+Customer-data manipulation
+
+Users attack web applications by manipulating data sent from their application component to the server’s application [20, 32]. For example, SQL injection, command injection, insecure direct object references, and cross-site scripting.
+
+S
+
+T06
+
+VM escape
+
+It is designed to exploit the hypervisor in order to take control of the underlying infrastructure 
+I
+
+T07
+
+VM hopping
+
+It happens when a VM is able to gain access to another VM (i.e. by exploting some hypervisor vulnerability) 
+
+I
+
+T08
+
+Malicious VM creation
+
+An attacker who creates a valid account can create a VM image containing malicious code such as a Trojan horse and store it in the provider repository [20].
+
+I
+
+T09
+
+Insecure VM migration
+
+Live migration of virtual machines exposes the contents of the VM state files to the network. An attacker can do the following actions:
+
+I
+
+a) Access data illegally during migration 
+
+b) Transfer a VM to an untrusted host
+
+c) Create and migrate several VM causing disruptions or DoS
+
+T10
+
+Sniffing/Spoofing virtual networks
+
+A malicious VM can listen to the virtual network or even use ARP spoofing to redirect packets from/to other VMs.
+
+I
+
+The relationship between threats and vulnerabilities is illustrated in Table 4, which describes how a threat can take advantage of some vulnerability to compromise the system. The goal of this analysis is also to identify some existing defenses that can defeat these threats. This information can be expressed in a more detailed way using misuse patterns. Misuse patterns describe how a misuse is performed from the point of view of the attacker. For instance, in threat T10, an attacker can read or tamper with the contents of the VM state files during live migration. This can be possible because VM migration transfer the data over network channels that are often insecure, such as the Internet. Insecure VM migration can be mitigated by the following proposed techniques: TCCP [63] provides confidential execution of VMs and secure migration operations as well. PALM [64] proposes a secure migration system that provides VM live migration capabilities under the condition that a VMM-protected system is present and active. Threat 11 is another cloud threat where an attacker creates malicious VM image containing any type of virus or malware. This threat is feasible because any legitimate user can create a VM image and publish it on the provider’s repository where other users can retrieve them. If the malicious VM image contains malware, it will infect other VMs instantiated with this malicious VM image. In order to overcome this threat, an image management system was proposed, Mirage. It provides the following security management features: access control framework, image filters, provenance tracking system, and repository maintenance services.
+Table 4
+Relationships between threats, vulnerabilities, and countermeasures
+
+Threat
+
+Vulnerabilities
+
+Incidents
+
+Countermeasures
+
+T01
+
+V01
+
+An attacker can use the victim’s account to get access to the target’s resources.
+
+Identity and Access Management Guidance
+
+Dynamic credential
+T02
+
+V03a, V03c
+
+Data from hard drives that are shared by several customers cannot be completely removed.
+
+Specify destruction strategies on Service-level Agreements (SLAs)
+
+T03
+
+V03a, V03c, V03d, V03f, V04a-f, V05a, V07
+
+Authors in illustrated the steps necessary to gain confidential information from other VMs co-located in the same server as the attacker.
+
+FRS techniques 
+
+Digital Signatures
+
+Side channel
+
+Encryption
+
+Homomorphic encryption
+T04
+
+V01, V02
+
+An attacker can request more computational resources, so other legal users are not able to get additional capacity.
+
+Cloud providers can force policies to offer limited computational resources
+
+T05
+
+V01
+
+Some examples are described in such as SQL, command injection, and cross-site scripting
+
+Web application scanners
+
+T06
+
+V06a, V06b
+
+A zero-day exploit in the HyperVM virtualization application that destroyed about 100,000 websites
+
+HyperSafe
+TCCP (Trusted Cloud
+
+Computing Platform)
+
+TVDc (Trusted Virtual Datacenter)
+
+T07
+
+V04b, V06b
+
+presents a study that demonstrates security flaws in most virtual machines monitors
+
+T08
+
+V05a, V05b
+
+An attacker can create a VM image containing malware and publish it in a public repository.
+
+Mirage
+
+T09
+
+V04d
+
+has empirically showed attacks against the migration functionality of the latest version of the Xen and VMware virtualization products.
+
+PALM
+
+TCCP
+
+VNSS
+
+T10
+
+V07
+
+Sniffing and spoofing virtual networks
+
+Virtual network framework based on Xen network modes: “bridged” and “routed”
+
+Countermeasures
+In this section, we provide a brief description of each countermeasure mentioned before, except for threats T02 and T07.
+
+Countermeasures for T01: account or service hijacking
+Identity and access management guidance
+Cloud Security Alliance (CSA) is a non-profit organization that promotes the use of best practices in order to provide security in cloud environments. CSA has issued an Identity and Access Management Guidance [65] which provides a list of recommended best practiced to assure identities and secure access management. This report includes centralized directory, access management, identity management, role-based access control, user access certifications, privileged user and access management, separation of duties, and identity and access reporting.
+
+Dynamic credentials
+presents an algorithm to create dynamic credentials for mobile cloud computing systems. The dynamic credential changes its value once a user changes its location or when he has exchanged a certain number of data packets.
+
+Countermeasures for T03: data leakage
+Fragmentation-redundancy-scattering (FRS) technique
+this technique aims to provide intrusion tolerance and, in consequence, secure storage. This technique consists in first breaking down sensitive data into insignificant fragments, so any fragment does not have any significant information by itself. Then, fragments are scattered in a redundant fashion across different sites of the distributed system.
+
+Digital signatures
+proposes to secure data using digital signature with RSA algorithm while data is being transferred over the Internet. They claimed that RSA is the most recognizable algorithm, and it can be used to protect data in cloud environments.
+
+Homomorphic encryption
+The three basic operations for cloud data are transfer, store, and process. Encryption techniques can be used to secure data while it is being transferred in and out of the cloud or stored in the provider’s premises. Cloud providers have to decrypt cipher data in order to process it, which raises privacy concerns. In, they propose a method based on the application of fully homomorphic encryption to the security of clouds. Fully homomorphic encryption allows performing arbitrary computation on ciphertexts without being decrypted. Current homomorphic encryption schemes support limited number of homomorphic operations such as addition and multiplication. The authors in [77] provided some real-world cloud applications where some basic homomorphic operations are needed. However, it requires a huge processing power which may impact on user response time and power consumption.
+
+Encryption
+Encryption techniques have been used for long time to secure sensitive data. Sending or storing encrypted data in the cloud will ensure that data is secure. However, it is true assuming that the encryption algorithms are strong. There are some well-known encryption schemes such as AES (Advanced Encryption Standard). Also, SSL technology can be used to protect data while it is in transit. Moreover, [69] describes that encryption can be used to stop side channel attacks on cloud storage de-duplication, but it may lead to offline dictionary attacks reveling personal keys.
+
+Countermeasures for T05: customer data manipulation
+ Web application scanners
+Web applications can be an easy target because they are exposed to the public including potential attackers. Web application scanners is a program which scans web applications through the web front-end in order to identify security vulnerabilities. There are also other web application security tools such as web application firewall. Web application firewall routes all web traffic through the web application firewall which inspects specific threats.
+
+Countermeasures for T06: VM escape
+HyperSafe
+It is an approach that provides hypervisor control-flow integrity. HyperSafe’s goal is to protect type I hypervisors using two techniques: non-bypassable memory lockdown which protects write-protected memory pages from being modified, and restricted pointed indexing that converts control data into pointer indexes. In order to evaluate the effectiveness of this approach, they have conducted four types of attacks such as modify the hypervisor code, execute the injected code, modify the page table, and tamper from a return table. They concluded that HyperSafe successfully prevented all these attacks, and that the performance overhead is low.
+
+Trusted cloud computing platform
+TCCP enables providers to offer closed box execution environments, and allows users to determine if the environment is secure before launching their VMs. The TCCP adds two fundamental elements: a trusted virtual machine monitor (TVMM) and a trusted coordinator (TC). The TC manages a set of trusted nodes that run TVMMs, and it is maintained but a trusted third party. The TC participates in the process of launching or migrating a VM, which verifies that a VM is running in a trusted platform. The authors in [78] claimed that TCCP has a significant downside due to the fact that all the transactions have to verify with the TC which creates an overload. They proposed to use Direct Anonymous Attestation (DAA) and Privacy CA scheme to tackle this issue.
+
+Trusted virtual datacenter
+TVDc insures isolation and integrity in cloud environments. It groups virtual machines that have common objectives into workloads named Trusted Virtual Domains (TVDs). TVDc provides isolation between workloads by enforcing mandatory access control, hypervisor-based isolation, and protected communication channels such as VLANs. TVDc provides integrity by employing load-time attestation mechanism to verify the integrity of the system.
+
+Countermeasures for T08: malicious virtual machine creation
+Mirage
+In, the authors propose a virtual machine image management system in a cloud computing environments. This approach includes the following security features: access control framework, image filters, a provenance tracking, and repository maintenance services. However, one limitation of this approach is that filters may not be able to scan all malware or remove all the sensitive data from the images. Also, running these filters may raise privacy concerns because they have access to the content of the images which can contain customer’s confidential data.
+
+Countermeasures for T09: insecure virtual machine migration
+Protection aegis for live migration of VMs (PALM)
+proposes a secure live migration framework that preserves integrity and privacy protection during and after migration. The prototype of the system was implemented based on Xen and GNU Linux, and the results of the evaluation showed that this scheme only adds slight downtime and migration time due to encryption and decryption.
+
+VNSS
+proposes a security framework that customizes security policies for each virtual machine, and it provides continuous protection thorough virtual machine live migration. They implemented a prototype system based on Xen hypervisors using stateful firewall technologies and userspace tools such as iptables, xm commands program and conntrack-tools. The authors conducted some experiments to evaluate their framework, and the results revealed that the security policies are in place throughout live migration.
+
+Countermeasures for T010: sniffing/spoofing virtual networks
+Virtual network security
+Wu and et al. presents a virtual network framework that secures the communication among virtual machines. This framework is based on Xen which offers two configuration modes for virtual networks: “bridged” and “routed”. The virtual network model is composed of three layers: routing layers, firewall, and shared networks, which can prevent VMs from sniffing and spoofing. An evaluation of this approach was not performed when this publication was published.
+
+Furthermore, web services are the largest implementation technology in cloud environments. However, web services also lead to several challenges that need to be addressed. Security web services standards describe how to secure communication between applications through integrity, confidentiality, authentication and authorization. There are several security standard specifications [79] such as Security Assertion Markup Language (SAML), WS-Security, Extensible Access Control Markup (XACML), XML Digital Signature, XML Encryption, Key Management Specification (XKMS), WS-Federation, WS-Secure Conversation, WS-Security Policy and WS-Trust. The NIST Cloud Computing Standards Roadmap Working Group has gathered high level standards that are relevant for Cloud Computing.
+
+3 Conclusions
+Cloud Computing is a relatively new concept that presents a good number of benefits for its users; however, it also raises some security problems which may slow down its use. Understanding what vulnerabilities exist in Cloud Computing will help organizations to make the shift towards the Cloud. Since Cloud Computing leverages many technologies, it also inherits their security issues. Traditional web applications, data hosting, and virtualization have been looked over, but some of the solutions offered are immature or inexistent. We have presented security issues for cloud models: IaaS, PaaS, and IaaS, which vary depending on the model. As described in this paper, storage, virtualization, and networks are the biggest security concerns in Cloud Computing. Virtualization which allows multiple users to share a physical server is one of the major concerns for cloud users. Also, another challenge is that there are different types of virtualization technologies, and each type may approach security mechanisms in different ways. Virtual networks are also target for some attacks especially when communicating with remote virtual machines.
+
+Some surveys have discussed security issues about clouds without making any difference between vulnerabilities and threats. We have focused on this distinction, where we consider important to understand these issues. Enumerating these security issues was not enough; that is why we made a relationship between threats and vulnerabilities, so we can identify what vulnerabilities contribute to the execution of these threats and make the system more robust. Also, some current solutions were listed in order to mitigate these threats. However, new security techniques are needed as well as redesigned traditional solutions that can work with cloud architectures. Traditional security mechanisms may not work well in cloud environments because it is a complex architecture that is composed of a combination of different technologies.
+
+We have expressed three of the items in Table 4 as misuse patterns. We intend to complete all the others in the future.
